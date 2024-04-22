@@ -1,0 +1,508 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, nav li {
+    font-family: 'Raleway', sans-serif;
+}
+
+option, p, span, li {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2, main p {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+h4, p, span, li {
+    font-size: 2rem;
+}
+
+nav li {
+    font-size: 2.5rem;
+    list-style: none;
+}
+
+footer span {
+    font-size: 1.5rem;
+}
+
+main img {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(247, 185, 69);
+}
+
+.about section {
+    border-bottom: 2px solid black;
+}
+
+.food ul li {
+    list-style-type: circle;
+}
+
+.menus {
+    background: rgba(231, 208, 179, .8);
+    border-radius: 10px;
+}
+
+.menus h4 {
+    text-decoration: underline;
+}
+
+.lunch, 
+.dessert {
+    border-right: 3px solid black;
+}
+
+.contact {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* ---------- Nav ---------- */
+
+header, nav {
+    height: 8.5vh;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+}
+
+select {
+    display: none;
+    width: 40%;
+    height: 50%;
+    text-align: center;
+}
+
+/* ---------- Main ---------- */
+
+main {
+    height: 90vh;
+    background-image: url(mediterranean.jpg);
+    background-size: cover;
+    background-clip: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+main section {
+    width: 30%;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* ---------- About Us ---------- */
+
+.about {
+    min-height: 310px;
+    height: 350px;
+    width: 100%;
+    min-width: auto;
+    overflow: scroll;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.about section {
+    height: 270px;
+    width: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+/* ---------- Menus ---------- */
+
+.food {
+    height: 130rem;
+    margin-top: 20px;
+}
+
+.foodHeading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menus {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.foodHeading,
+.menus {
+    min-width: 1500px;
+    overflow: scroll;
+}
+
+.menus > section {
+    width: 50%;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.menus ul {
+    margin-left: 18px;
+    padding: 0 20px;
+}
+
+.menus ul li,
+.menus h4 {
+    padding: 5px 0;
+}
+
+/* ---------- Contact ---------- */
+
+.contact {
+    width: 50%;
+    height: 40rem;
+    margin: 2% auto 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact > section {
+    width: 50%;
+    height: 300px;
+}
+
+.contactInfo,
+.hours {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hours {
+    justify-content: space-around;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer span {
+    display: block;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media screen and (max-width: 1500px) {
+    h3 {
+        font-size: 2.2rem;
+    }
+
+    .menus h4,
+    .menus li {
+        font-size: 1.7rem;
+    }
+
+    .food {
+        height: auto;
+    }
+
+    .foodHeading,
+    .menus {
+        min-width: auto;
+    }
+
+}
+
+@media screen and (max-width: 1345px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2, main p {
+        font-size: 2.7rem;
+    }
+
+    h3 {
+        font-size: 2.2rem;
+    }
+
+    h4, p, span, li {
+        font-size: 1.7rem;
+    }
+
+    nav li {
+        font-size: 2.2rem;
+    }
+    
+    footer span {
+        font-size: 1.2rem;
+    }
+    
+    main {
+        height: 70vh;
+    }
+
+    main section {
+        margin-right: 2%;
+    }
+   
+    .contact {
+        width: 60%;
+    }
+
+    
+}
+
+@media screen and (max-width: 1000px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    main p {
+        font-size: 2.2rem;
+    }
+
+    main {
+        height: 50vh;
+    }
+
+    main section {
+        margin: 10% 5px 0 0;
+    }
+
+    nav ul {
+        width: 55%;
+    }
+    
+}
+
+@media screen and (max-width: 850px) {
+    nav li {
+        font-size: 2rem;
+    }
+
+    nav {
+        justify-content: space-around;
+    }
+
+    nav ul {
+        width: 90%;
+    }
+
+    main p {
+        width: 75%;
+        margin: 0 auto;
+        padding-bottom: 10px;
+        border-bottom: 2px solid black;
+    }
+    
+    main {
+        background: none;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    main section {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin: 0;
+    }
+
+    main img {
+        display: block;
+        width: 100%;
+        height: 90%;
+        margin: 0 auto;
+    }
+
+    .about {
+        height: 370px;
+    }
+
+    .about section {
+        height: 320px;
+    }
+
+    .menus {
+        flex-flow: column nowrap;
+        justify-content: space-around;
+    }
+    
+    .menus > section {
+        width: 90%;
+        margin: 10px auto;
+        padding-bottom: 10px;
+        border-right: none;
+    }
+
+    .menus > section:first-of-type {
+        margin-top: 20px;
+    }
+
+    .menus section:nth-child(-n+3) {
+        border-bottom: 2px solid black;
+    }
+
+    .contact {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 635px) {
+    .contact {
+        margin-top: 5%;
+        height: 50rem;
+        flex-flow: column nowrap;
+    }
+
+    .contact > section {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .contact > section:first-of-type {
+        height: 60px;
+    }
+
+}
+
+@media screen and (max-width: 520px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    main p {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.9rem;
+    }
+
+    h3 {
+        font-size: 1.7rem;
+    }
+
+    .menus h4,
+    .menus li,
+    h4,
+    p,
+    span,
+    li {
+        font-size: 1.2rem;
+    }
+
+    nav li {
+        font-size: 1.6rem;
+    }
+    
+    footer span {
+        font-size: 1rem;
+    }
+
+    header, nav {
+        height: 6.5vh;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    select {
+        display: block;
+    }
+
+    .about {
+        height: 310px;
+    }
+
+    .about section {
+        height: 290px;
+    }
+
+    .contact {
+        height: 35rem;
+    }
+
+    .contact section:first-of-type {
+        height: 40px;
+    }
+
+    .contact .hours {
+        height: 200px;
+    }
+}
